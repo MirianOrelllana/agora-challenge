@@ -1,0 +1,146 @@
+.dashboard_toast--box {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 99999;
+    right: -100%;
+    opacity: 1;
+    visibility: visible;
+    animation: 5s anim-toast-default;
+    transition: all .25s ease-in-out;
+    animation-fill-mode: forwards; }
+    .dashboard_toast--box.--confirm-toast {
+      width: 100%;
+      height: 100%; }
+    .dashboard_toast--box.toast-with-animation {
+      animation: 5s anim-toast-auto-hidden; }
+  
+  .dashboard_toast-body {
+    max-height: 200px;
+    overflow: auto; }
+  
+  .dashboard_toast--wrap {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background: #fff;
+    min-width: 350px;
+    overflow: hidden;
+    border-left: solid 5px #add;
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.2), -6px -6px 12px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 10px 0;
+    max-width: 500px;
+    top: 64px;
+    right: 5px; }
+    .dashboard_toast--wrap:hover > div:nth-child(3) button {
+      display: inline; }
+    .dashboard_toast--wrap.--success {
+      border-color: #05da93; }
+      .dashboard_toast--wrap.--success > div:nth-child(1) span {
+        background: #05da93;
+        color: #fff; }
+      .dashboard_toast--wrap.--success > div:nth-child(2) button {
+        background: #05da93; }
+    .dashboard_toast--wrap.--danger {
+      border-color: #e9075e; }
+      .dashboard_toast--wrap.--danger > div:nth-child(1) span {
+        background: #e9075e;
+        color: #fff; }
+      .dashboard_toast--wrap.--danger > div:nth-child(2) button {
+        background: #e9075e; }
+    .dashboard_toast--wrap.--info {
+      border-color: #6802ec; }
+      .dashboard_toast--wrap.--info > div:nth-child(1) span {
+        background: #6802ec;
+        color: #fff; }
+      .dashboard_toast--wrap.--info > div:nth-child(2) button {
+        background: #6802ec; }
+    .dashboard_toast--wrap.--warning {
+      border-color: #f36f02; }
+      .dashboard_toast--wrap.--warning > div:nth-child(1) span {
+        background: #f36f02;
+        color: #fff; }
+      .dashboard_toast--wrap.--warning > div:nth-child(2) button {
+        background: #f36f02; }
+    .dashboard_toast--wrap > div:nth-child(1) {
+      padding: 0 10px; }
+      .dashboard_toast--wrap > div:nth-child(1) span {
+        border-radius: 100%;
+        background: #e7d0d0;
+        padding: 8px;
+        display: inline-block;
+        font-size: 16px; }
+    .dashboard_toast--wrap > div:nth-child(2) {
+      padding: 0 10px 0 0;
+      width: 100%; }
+      .dashboard_toast--wrap > div:nth-child(2) h1 {
+        font-size: 18px; }
+      .dashboard_toast--wrap > div:nth-child(2) p {
+        font-size: 14px;
+        word-break: break-word; }
+      .dashboard_toast--wrap > div:nth-child(2) > div:nth-child(2) {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        margin: 4px 0 0 0; }
+        .dashboard_toast--wrap > div:nth-child(2) > div:nth-child(2) button {
+          font-size: 11px;
+          padding: 4px 6px;
+          border-radius: 6px;
+          color: #fff; }
+    .dashboard_toast--wrap > div:nth-child(3) {
+      padding: 0px;
+      position: absolute;
+      top: 2px;
+      right: 2px; }
+      .dashboard_toast--wrap > div:nth-child(3) button {
+        display: none;
+        height: 36px;
+        width: 36px;
+        background: none;
+        border-radius: 100%;
+        line-height: 36px;
+        text-align: center;
+        color: #888; }
+        .dashboard_toast--wrap > div:nth-child(3) button:active {
+          background: #cfcfcf; }
+        .dashboard_toast--wrap > div:nth-child(3) button span {
+          margin: 0;
+          font-size: 16px; }
+  
+  @keyframes anim-toast-default {
+    10% {
+      right: 5px;
+      visibility: visible;
+      opacity: 1; }
+    90% {
+      visibility: visible;
+      opacity: 1;
+      right: 5px; }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      right: 5px; } }
+  
+  @keyframes anim-toast-auto-hidden {
+    10% {
+      right: 5px;
+      visibility: visible;
+      opacity: 1; }
+    90% {
+      visibility: visible;
+      opacity: 1;
+      right: 5px; }
+    98% {
+      right: -100%; }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+      right: -100%; } }
+  
+  @media screen and (max-width: 768px) {
+    .dashboard_toast--wrap {
+      min-width: 300px; } }
+  

@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/sass/index.scss'
-import { Table } from './components/Table/Table';
 import 'flowbite';
+import Inicio from './pages/Inicio/Inicio';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Table />
+    <Inicio />
   </React.StrictMode>
 );
 
